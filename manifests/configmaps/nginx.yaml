@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
+metadata:
+  name: default.conf
 data:
   default.conf: |-
     server {
         listen 80;
         location = / {
-            proxy_pass   http://sandbox:5085;
+            proxy_pass   http://sandbox:5005;
         }
     }
