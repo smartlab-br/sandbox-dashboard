@@ -34,14 +34,14 @@ spec:
                 operator: In
                 values:
                 - stg
+      imagePullSecrets:
+      - name: dockerhub
       containers:
       - env:
         - name: DEBUG
           value: "false"
         image: mptrabalho/sandbox-dashboard:latest
         imagePullPolicy: Always
-        imagePullSecrets:
-          - name: dockerhub
         name: flask
         resources:
           limits:
