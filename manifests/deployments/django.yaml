@@ -38,8 +38,10 @@ spec:
       - env:
         - name: DEBUG
           value: "false"
-        image: mptrabalho/sandbox-dashboard:base
+        image: mptrabalho/sandbox-dashboard:latest
         imagePullPolicy: Always
+        imagePullSecrets:
+          - name: dockerhub
         name: flask
         resources:
           limits:
